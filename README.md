@@ -1,5 +1,8 @@
-## Infrastructue-as-Code : Automate Operator Installation on OpenShift
+## Infrastructue-as-Code : Learning Path
 
-This repo contains the source code for the tutorial - `Automate Operator Installation on OpenShift`.
+This repo contains the source code for the following tutorial - 
 
-Read the [tutorial]().
+* [Automate Operator Installation on OpenShift]()
+* [Automate Provisioning of a service instance of the Installed Operator on OpenShift]()
+
+
