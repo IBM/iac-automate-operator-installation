@@ -65,13 +65,13 @@ CRD=`echo $CRDs | awk -F',' '{print $1}'`
 echo "\n**Considering first CRD to install - $CRD"
 
 # ask user to provide its choice
-echo "\n**Do you want to modify the default configuration of CRD (yes/no):"
+echo "\n**Do you want to modify the default configuration of CR (yes/no):"
 read choice
 
 # create service instance using odo CLI
 if [ $choice == "yes" ]
 then
-    CONFIG_NAME=crd.yaml
+    CONFIG_NAME=cr.yaml
     odo service create $SUBSCRIBED_OPERATOR_NAME/$CRD --dry-run > $CONFIG_NAME
     echo "\n**CRD configuration - '$CONFIG_NAME' has been created." 
     echo "Please open '$CONFIG_NAME' in another terminal and modify as per your requirement."
@@ -123,4 +123,5 @@ oc get routes | grep $DEPLOYMENT_NAME
 
 ROUTE=`oc get routes | grep $DEPLOYMENT_NAME | awk '{print $2}'`
 
-echo "\nYou are all set to access the service instance. Access the route at 'http://$ROUTE'.\n"
+echo "\nYou are all set to access the service instance!"
+echo "\nAccess the route at 'http://$ROUTE'.\n\n"
